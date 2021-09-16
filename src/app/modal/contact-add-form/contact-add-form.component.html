@@ -1,0 +1,46 @@
+<button class="close-btn" mat-dialog-close><i class="fa fa-times"></i></button>
+
+<form class="addUserForm" [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <h3>Add User</h3>
+    <hr>
+    <div class="row">
+        <div class="col-4">
+            <div class="form-group">
+                <label for="">Image url*</label><br>
+                <input type="text" class="image-box" formControlName="avatar">
+            <div class="error" *ngIf="profileForm.controls.avatar.invalid && profileForm.controls.avatar.touched">Image is required*</div>
+            </div>
+            <!-- <input type="text" class="image-box" formControlName="avatar"> -->
+            <div class="text-center mt-4">
+                <!-- <a  class="upload" >Upload photo <i class="fa fa-upload"></i></a> -->
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="form-group">
+                <label for="">Name*</label><br>
+            <input type="text" formControlName="name" ><br>
+            <div class="error" *ngIf="profileForm.controls.name.invalid && profileForm.controls.name.touched">Name is required*</div>
+            </div>
+            <div class="form-group">
+                <label for="">Email*</label><br>
+            <input type="email" formControlName="email"><br>
+            <div class="error" *ngIf="profileForm.controls.email.invalid && profileForm.controls.email.touched">Email is required*</div>
+            </div>
+            <div class="form-group">
+                <label for="">Date of birth*</label><br>
+            <input type="date" formControlName="dob"><br>
+            <div class="error" *ngIf="profileForm.controls.dob.invalid && profileForm.controls.dob.touched">Date is required*</div>
+            </div>
+            <div class="form-group">
+                <label for="">Country*</label><br>
+            <input type="text" formControlName="country">
+            <div class="error" *ngIf="profileForm.controls.country.invalid && profileForm.controls.country.touched">Country is required*</div>
+            </div>
+            
+        </div>
+    </div>
+   <div class="text-center mt-3">
+    <button class="btn btn-success btn-md mr-5" type="submit" [disabled]="!profileForm.valid">Add</button>
+    <button  class="btn btn-danger btn-md"  mat-dialog-close>Cancel</button>
+   </div>
+</form>

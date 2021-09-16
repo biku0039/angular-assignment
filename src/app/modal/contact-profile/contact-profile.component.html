@@ -1,0 +1,20 @@
+<button class="close-btn" mat-dialog-close><i class="fa fa-times"></i></button>
+
+<div class="addUserForm text-center" *ngIf="userData" >
+    <h3>User Profile</h3>
+    <hr>
+    <img src="{{userData.avatar}}" class="profile-img-box" alt="img" />
+    <div class="row m-0 mt-3">
+        <div class="col-6"><h4><b>Name :</b></h4> </div>
+        <div class="col-6 text-left"><h4><b>{{userData.name}}</b></h4></div>
+    </div>
+    <div class="row m-0 ">
+        <div class="col-6"><h4><b>Email :</b></h4> </div>
+        <div class="col-6 text-left"><h4><b>{{userData.email}}</b></h4></div>
+    </div>
+    <div class="row m-0 ">
+        <div class="col-6"><h4><b>DOB :</b></h4> </div>
+        <div class="col-6 text-left"><h4><b>{{userData.dob | date}}</b></h4></div>
+    </div>
+    
+</div>

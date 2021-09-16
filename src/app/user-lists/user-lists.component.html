@@ -1,0 +1,38 @@
+<div class="user-list">
+    <div class="row m-0 heading">
+        <div class="col">Image</div>
+        <div class="col-3 text-center">Name</div>
+        <div class="col-3 text-center">Email</div>
+        <div class="col text-center">Age</div>
+        <div class="col text-center">Country</div>
+        <div class="col text-center">Action</div>
+    </div>
+    <div *ngIf="userData.length > 0; else nodata">
+        <div class="card  pt-2 pb-2 shadow-sm mb-2" *ngFor="let user of userData; let index">
+            <div class="row m-0">
+                <div class="col"><span class="m-auto"><img src="{{user.avatar}}" alt=""></span></div>
+                
+                <div class="col-3 text-center">
+                   
+                        <p><a (click)="openEditForm(index)">{{user.name}}</a></p>
+                </div>
+                <div class="col-3 text-center"> 
+                    <p>{{user.email}}</p>
+                    
+                </div>
+                <div class="col text-center">
+                  <p>{{user.dob | dateConvert}}</p>  
+                </div>
+                <div class="col text-center">
+                    <p >{{user.country}}</p>  
+                  </div>
+                <div class="col text-center">
+                    <p class="close"><a (click)="onProfileView(index)"><i class="fa fa-eye"></i></a></p> 
+                  </div>
+            </div>
+        </div>
+    </div>
+    <ng-template #nodata>
+        <div class="text-center mt-5"><h3>No user is available</h3></div> 
+    </ng-template>
+</div>

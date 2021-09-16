@@ -1,0 +1,32 @@
+.user-list{
+    margin-top:50px;
+    .heading{
+        background: black;
+        color: white;
+        padding:  10px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 16px;
+    }
+ 
+
+    img{
+        height: 50px;
+        width: 50px;
+       border-radius: 50%;
+    }
+    p{
+        margin-top: 16px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 16px;
+    }
+.close{
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 14px;
+}
+  .ml-1{
+      margin-left: 10px;
+  } 
+}

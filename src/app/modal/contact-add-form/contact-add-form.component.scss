@@ -1,0 +1,17 @@
+.img-box{
+    margin-top: 20px;
+    width: auto;
+    height:150px;
+    border: 1px solid rgb(73, 70, 70);
+    text-align: center; 
+}
+.upload, .upload:hover{
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    background: rgb(59, 59, 238);
+    padding:10px;
+    width: 100%;
+    margin-top: 10px;
+}
